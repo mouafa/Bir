@@ -42,8 +42,12 @@ const emit = (id, ...args) => {
   _listners.map(fn => fn(...args))
 }
 
-const clear = () => {
-  listners = {}
+const clear = (id) => {
+  if (id) {
+    delete listners.id
+  } else {
+    listners = {}
+  }
 }
 
 module.exports = {
