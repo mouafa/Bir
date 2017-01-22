@@ -43,7 +43,7 @@ const emit = (id, ...args) => {
 }
 
 const clear = (id) => {
-  if (id) {
+  if (typeof id === 'string') {
     delete listners.id
   } else {
     listners = {}
