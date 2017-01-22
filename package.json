@@ -4,7 +4,9 @@
   "description": "a javascript event driven system",
   "main": "index.js",
   "scripts": {
+    "precommit": "git add .",
     "commit": "git-cz",
+    "postcommit": "git push origin HEAD",
     "test": "ava",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },

@@ -1,3 +1,13 @@
+module.exports = {
+  on,
+  remove,
+  once,
+  emit,
+  replace,
+  debounce,
+  clear
+}
+
 var listners = {}
 
 const on = (id, fn) => {
@@ -44,14 +54,4 @@ const emit = (id, ...args) => {
 
 const clear = () => {
   listners = {}
-}
-
-module.exports = {
-  on,
-  remove,
-  once,
-  emit,
-  replace,
-  debounce,
-  clear
 }
