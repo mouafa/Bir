@@ -11,6 +11,7 @@ before_script:
   - npm prune
 script:
   - npm run test
+  - npm run cover
 after_success:
   - './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
   - npm run semantic-release
